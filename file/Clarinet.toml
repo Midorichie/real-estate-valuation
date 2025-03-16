@@ -1,0 +1,36 @@
+[project]
+name = "real-estate-valuation"
+description = "On-Chain Real Estate Valuation Tool built on Stacks Blockchain"
+authors = []
+telemetry = false
+cache_dir = "./.cache"
+requirements = []
+
+[contracts.real-estate-valuation]
+path = "contracts/real-estate-valuation.clar"
+depends_on = []
+
+[contracts.property-registry]
+path = "contracts/property-registry.clar"
+depends_on = []
+
+[contracts.valuation-engine]
+path = "contracts/valuation-engine.clar"
+depends_on = []
+
+[contracts.utils]
+path = "contracts/utils.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
